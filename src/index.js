@@ -19,7 +19,7 @@ function toReadable(number) {
     'sixteen',
     'seventeen',
     'eighteen',
-    'nineteen',
+    'nineteen'
   ];
 
   const tens = [
@@ -30,7 +30,7 @@ function toReadable(number) {
     'sixty',
     'seventy',
     'eighty',
-    'ninety',
+    'ninety'
   ];
 
   if (number < 20) {
@@ -54,4 +54,3 @@ function toReadable(number) {
 }
 
 module.exports = toReadable;
-
