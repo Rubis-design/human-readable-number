@@ -19,7 +19,7 @@ function toReadable(number) {
     'sixteen',
     'seventeen',
     'eighteen',
-    'nineteen'
+    'nineteen',
   ];
 
   const tens = [
@@ -30,7 +30,7 @@ function toReadable(number) {
     'sixty',
     'seventy',
     'eighty',
-    'ninety'
+    'ninety',
   ];
 
   if (number < 20) {
@@ -40,7 +40,6 @@ function toReadable(number) {
   if (number < 100) {
     const tensDigit = Math.floor(number / 10);
     const units = number % 10;
-
     return units === 0
       ? tens[tensDigit - 2]
       : `${tens[tensDigit - 2]} ${numberUpToNineteen[units]}`;
@@ -49,7 +48,6 @@ function toReadable(number) {
   const hundreds = Math.floor(number / 100);
   const remainder = number % 100;
   const result = `${numberUpToNineteen[hundreds]} hundred`;
-
   return remainder === 0 ? result : `${result} ${toReadable(remainder)}`;
 }
 
